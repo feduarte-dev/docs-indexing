@@ -8,9 +8,6 @@ def txt_importer(path_file):
     try:
         with open(path_file, "r") as file:
             lines = [line.strip() for line in file]
+            return lines
     except FileNotFoundError:
         print(f"Arquivo {path_file} não encontrado", file=sys.stderr)
-    return lines
-
-
-print(txt_importer("statics/nomde_pedro.txt"))
