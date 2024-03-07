@@ -2,7 +2,6 @@ import sys
 
 
 def txt_importer(path_file):
-
     if path_file[-3:] != "txt":
         print("Formato inválido", file=sys.stderr)
     try:
@@ -10,4 +9,6 @@ def txt_importer(path_file):
             lines = [line.strip() for line in file]
             return lines
     except FileNotFoundError:
-        print(f"Arquivo {path_file} não encontrado", file=sys.stderr)
+        print(
+            f"Arquivo {path_file} não encontrado", file=sys.stderr
+        )  # essa é a sintaxe adequada para usar stederr?

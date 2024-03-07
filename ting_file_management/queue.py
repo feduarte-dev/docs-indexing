@@ -18,11 +18,6 @@ class Queue(AbstractQueue):
         if 0 <= index < len(self._data):
             return self._data[index]
         else:
-            raise IndexError("Índice Inválido ou Inexistente")
-
-
-queue = Queue()
-queue.enqueue(42)
-queue.enqueue(43)
-queue.enqueue(44)
-print(queue.search(2))
+            raise IndexError(
+                "Índice Inválido ou Inexistente"
+            )  # Deveria usar try / except?
